@@ -33,3 +33,8 @@
     color: #5290Fd;
 }
 
+@media screen and (max-width:480px) {
+    .card{
+        width: auto;
+    }
+}

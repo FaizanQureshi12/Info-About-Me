@@ -12,75 +12,82 @@ import glassesimoji from '../../img/glassesimoji.png'
 import FloatingDiv from "../FloatingDiv/FloatingDiv";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
 
-const Intro =()=>{
+const Intro = () => {
 
-    const transition = {duration: 2, type:'spring'}
+    // const transition = {duration: 2, type:'spring'}
 
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
-    return(
+    return (
         <div className="intro">
             <div className="i-left">
-          <div className="i-name">
-            <span style={{color:darkMode? 'white':''}}>Hy! I Am</span>
-            <span>Faizan Qureshi</span>
-            <span>Full Stack Developer with high 
-                level of Experience in web designing and 
-                development producting the Quality work
-            </span>
-          </div>
-          <button className="button i-button">Hire me</button>
-          <div className="i-icons">
-            <a href="https://github.com/FaizanQureshi12">
-            <img src={Github} alt="" />
-            </a>
-            <a href="https://www.linkedin.com/in/faizan-qureshi-5a667a244/">
-            <img src={LinkedIn} alt="" />
-            </a>
-            <a href="https://www.instagram.com/faizan4949/">
-            <img src={Instagram} alt="" />
-            </a>
-            
-          </div>
+                <div className="i-name">
+                    <span style={{ color: darkMode ? 'white' : '' }}>Hy! I Am</span>
+                    <span>Faizan Qureshi</span>
+                    <span>Full Stack Developer with high
+                        level of Experience in web designing and
+                        development producting the Quality work
+                    </span>
+                </div>
+                <button className="button i-button">Hire me</button>
+                <div className="i-icons">
+                    <a href="https://github.com/FaizanQureshi12">
+                        <img src={Github} alt="" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/faizan-qureshi-5a667a244/">
+                        <img src={LinkedIn} alt="" />
+                    </a>
+                    <a href="https://www.instagram.com/faizan4949/">
+                        <img src={Instagram} alt="" />
+                    </a>
+
+                </div>
             </div>
             <div className="i-right">
                 <img src={Vector1} alt="" />
                 <img src={Vector2} alt="" />
                 <img src={boy} alt="" />
-                <motion.img 
-                initial={{left:'-36%'}}
-                whileInView={{left:'-24%'}}
-                transition={transition}
-                src={glassesimoji} alt="" 
+                {/* motion.img  */}
+                <img
+                    // initial={{left:'-36%'}}
+                    // whileInView={{left:'-24%'}}
+                    // transition={transition}
+                    src={glassesimoji} alt=""
                 />
-
-                <motion.div 
-                initial={{left:'74%',top:'-4%'}}
-                whileInView={{left:'68%'}}
-                transition={transition}
-                style={{top:'-4%', left:'68%' ,color:"black"}}>
-                    <FloatingDiv image={Crown}  txt1='Web' txt2='Developer'/>
-                </motion.div>
-                <motion.div 
-                initial={{left:'9rem',top:'18rem'}}
-                whileInView={{left:'0rem'}}
-                transition={transition}
-                style={{top:'18rem',left:'0rem',color:"black"}}>
-                    <FloatingDiv image={thumbup} txt1='Best Design' txt2='Award' />
-                </motion.div>
-                {/* blur divs */}
-                <div className="blur" style={{background: 'rgb(238 210 255)'}}>
+                {/* motion.div */}
+                <div
+                    // initial={{left:'74%',top:'-4%'}}
+                    // whileInView={{left:'68%'}}
+                    // transition={transition}
+                    className="floating-div"
+                    style={{ top: '-4%', left: '68%', color: "black" }}>
+                    <FloatingDiv image={Crown} txt1='Web' txt2='Developer' />
                 </div>
-            <div className="blur"
-            style={{background:'#C1F5FF',
-            top: '17rem',
-            width: '21rem',
-            height: '11rem',
-            left:'-9rem'
-            }}></div>
+                {/* </motion.div> */}
+                <div
+                    // initial={{left:'9rem',top:'18rem'}}
+                    // whileInView={{left:'0rem'}}
+                    // transition={transition}
+                    style={{ top: '18rem', left: '0rem', color: "black" }}
+                    className="floating-div"
+                >
+                    <FloatingDiv image={thumbup} txt1='Best Design' txt2='Award' />
+                </div>
+                {/* </motion.div> */}
+                {/* blur divs */}
+                <div className="blur" style={{ background: 'rgb(238 210 255)' }}>
+                </div>
+                <div className="blur"
+                    style={{
+                        background: '#C1F5FF',
+                        top: '17rem',
+                        width: '21rem',
+                        height: '11rem',
+                        left: '-9rem'
+                    }}></div>
             </div>
 
         </div>
