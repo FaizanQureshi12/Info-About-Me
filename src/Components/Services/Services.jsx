@@ -5,13 +5,20 @@ import HeartEmoji from '../../img/heartemoji.png'
 import Glasses from '../../img/glasses.png' 
 import Humble from '../../img/humble.png' 
 import Resume from './resume.pdf'
+import { themeContext } from "../../Context";
+import { useContext } from "react";
+import {motion} from 'framer-motion'
 
 const Services =()=>{
+    const transition = {duration :1,type:'spring'}
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return(
-<div className="services">
+<div className="services" id="Services">
     {/* left side */}
     <div className="awesome">
-<span>My Awesome </span>
+<span style={{color:darkMode? 'white':''}}>My Awesome </span>
 <span>Services</span>
 <spane>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium possimus harum velit vitae, 
@@ -26,21 +33,29 @@ const Services =()=>{
     </div>
     {/* Right side */}
     <div className="cards">
-    <div style={{left:'14rem'}}>
+    <motion.div
+    whileInView={{left:'14rem'}}
+    initial={{left:'25rem'}}
+    transition={transition}
+    style={{left:'14rem'}}>
         <Card 
         emoji ={HeartEmoji}
         heading ={'Design'}
         detail = {'Figma,Sketch, Material Ui,Adobe'}
         />
-    </div>
+    </motion.div>
 
-    <div style={{left:'-4rem', top:'12rem'}}>
+    <motion.div 
+    // whileInView={{left:''}}
+    // initial={{left:''}}
+    // transition={transition}
+    style={{left:'-4rem', top:'12rem'}}>
         <Card 
         emoji ={Glasses}
         heading ={'Developer'}
         detail = {'Html,CSS,JavaScript, React.Js, Express.js,MonGoDB,FireBase'}
         />
-    </div>
+    </motion.div>
 
     <div style={{left:'12rem', top:'19rem'}}>
         <Card 

@@ -5,7 +5,7 @@ const Experience = () => {
     return (
         <div className="experience">
             <div className="achievement">
-                <div className="circle">1+ </div>
+                <div className="circle" >1+ </div>
                <span>years</span> 
                <span>Experience</span> 
             </div>

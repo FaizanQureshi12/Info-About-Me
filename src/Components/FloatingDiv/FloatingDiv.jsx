@@ -1,6 +1,7 @@
 import React from "react";
 import './Floating.css'
 
+
 const FloatingDiv =({image,txt1,txt2})=>{
     return(
         <div className="floatingdiv">
