@@ -41,3 +41,16 @@ align-items: center;
 {
     color: var(--orange);
 }
+
+@media screen and (max-width:480) {
+  .experience{
+    width: 0px;
+  }
+  .achievement{
+    width: 1px;
+  }
+  .circle{
+    height: 4px;
+  }  
+    
+}

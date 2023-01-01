@@ -20,11 +20,11 @@ const Services =()=>{
     <div className="awesome">
 <span style={{color:darkMode? 'white':''}}>My Awesome </span>
 <span>Services</span>
-<spane>
+<span>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium possimus harum velit vitae, 
     <br />
      ratione unde excepturi natus. Neque dolorum beatae et.
-</spane>
+</span>
 <a href={Resume} download>
 <button className="button s-button">Download CV</button>
 </a>
@@ -43,7 +43,7 @@ const Services =()=>{
         <Card 
         emoji ={HeartEmoji}
         heading ={'Design'}
-        detail = {'Figma,Sketch, Material Ui,Adobe'}
+        detail = {'Figma,Sketch, Material Ui, Adobe,BootStrap,Tailwind'}
         />
     </div>
     {/* </motion.div> */}
@@ -64,7 +64,7 @@ const Services =()=>{
         <Card 
         emoji ={Humble}
         heading ={'UI/Ux'}
-        detail = {"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro explicabo voluptate fa iste fugit? Sed."
+        detail = {"Lorem ipsum dolor sit, amet consectetur adipisicing elit.  voluptate fa iste fugit? Sed."
     }
         />
     </div>

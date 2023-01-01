@@ -61,6 +61,7 @@
         display: flex;
         flex-direction: column;
         gap: 17rem;
+        height: 15px;
   }
   .cards>*{
     position: static;

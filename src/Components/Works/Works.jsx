@@ -2,7 +2,7 @@ import React from "react";
 import './Works.css'
 import Upwork from '../../img/Upwork.png'
 import Fiverr from '../../img/fiverr.png'
-import Amazon from '../../img/amazon.png'
+import Amazon from '../../img/amazon.png' 
 import Shopify from '../../img/Shopify.png'
 import Facebook from '../../img/Facebook.png'
 import { themeContext } from "../../Context";
@@ -21,7 +21,7 @@ const Works = () => {
             <div className="awesome">
                 <span style={{color:darkMode? 'white':''}}>Works for All these </span>
                 <span>Brands & Clients</span>
-                <spane>
+                <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium possimus harum velit vitae,
                     <br />
                     ratione unde excepturi natus. Neque dolorum beatae et.
@@ -29,7 +29,7 @@ const Works = () => {
                     ratione unde excepturi natus. Neque dolorum beatae et. Working with Passion
                     <br />
                     ratione unde excepturi natus.
-                </spane>
+                </span>
                     <button className="button s-button">Hire me</button>
                 <div className="blur s-blurl" style={{ background: '#ABF1FF94' }}></div>
             </div>
@@ -43,10 +43,14 @@ const Works = () => {
                 // transition={{duration:3.5,type:"spring"}}
                 className="w-mainCircle">
                     <div className="w-secCircle">
+                        <a href="https://www.upwork.com/freelancers/~01546dfc05e27f7975" target='blank'>
                         <img src={Upwork} alt="" />
+                        </a>
                     </div>
                     <div className="w-secCircle">
+                        <a href="https://www.fiverr.com/faizanquresh246" target='blank'>
                         <img src={Fiverr} alt="" />
+                        </a>
                     </div>
                     <div className="w-secCircle">
                         <img src={Amazon} alt="" />
@@ -55,7 +59,9 @@ const Works = () => {
                         <img src={Shopify} alt="" />
                     </div>
                     <div className="w-secCircle">
+                        <a href="https://web.facebook.com/FaizanDynamicEarth123" target='blank'>
                         <img src={Facebook} alt="" />
+                        </a>
                     </div>
                 </div>
                 {/* </motion.div> */}
