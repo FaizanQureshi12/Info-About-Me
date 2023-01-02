@@ -23,7 +23,7 @@ const Services =()=>{
 <span>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium possimus harum velit vitae, 
     <br />
-     ratione unde excepturi natus. Neque dolorum beatae et.
+     ratione unde excepturi natus. Neque dolorum beatae et. 
 </span>
 <a href={Resume} download>
 <button className="button s-button">Download CV</button>

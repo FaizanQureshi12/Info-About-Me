@@ -45,7 +45,7 @@ const Works = () => {
                     <div className="w-secCircle">
                         <a href="https://www.upwork.com/freelancers/~01546dfc05e27f7975" target='blank'>
                         <img src={Upwork} alt="" />
-                        </a>
+                        </a>  
                     </div>
                     <div className="w-secCircle">
                         <a href="https://www.fiverr.com/faizanquresh246" target='blank'>

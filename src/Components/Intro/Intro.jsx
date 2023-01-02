@@ -27,7 +27,7 @@ const Intro = () => {
                 <div className="i-name">
                     <span style={{ color: darkMode ? 'white' : '' }}>Hy! I Am</span>
                     <span>Faizan Qureshi</span>
-                    <span>Full Stack Developer with high
+                    <span >Full Stack Developer with high
                         level of Experience in web designing and
                         development producting the Quality work
                     </span>
