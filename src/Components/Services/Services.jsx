@@ -38,20 +38,20 @@ const Services =()=>{
     // whileInView={{left:'14rem'}}
     // initial={{left:'25rem'}}
     // transition={transition}
-    // style={{left:'14rem'}}
+    style={{left:'14rem'}}
     >
         <Card 
         emoji ={HeartEmoji}
         heading ={'Design'}
-        detail = {'Figma,Sketch, Material Ui, Adobe,BootStrap,Tailwind'}
+        detail = {'Figma,Sketch, Material Ui, Adobe,BootStrap,Tailwind.CSS'}
         />
     </div>
     {/* </motion.div> */}
 
     <div 
-    // whileInView={{left:''}}
-    // initial={{left:''}}
-    // transition={transition}
+    //  initial={{ left: "-11rem", top: "12rem" }}
+    //  whileInView={{ left: "-4rem" }}
+    //  transition={transition}
     style={{left:'-4rem', top:'12rem'}}>
         <Card 
         emoji ={Glasses}
@@ -60,7 +60,11 @@ const Services =()=>{
         />
     </div>
 
-    <div style={{left:'12rem', top:'19rem'}}>
+    <div 
+    //  initial={{ top: "19rem", left: "25rem" }}
+    //  whileInView={{ left: "12rem" }}
+    //  transition={transition}
+    style={{left:'12rem', top:'19rem'}}>
         <Card 
         emoji ={Humble}
         heading ={'UI/Ux'}
