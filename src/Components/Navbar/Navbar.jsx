@@ -1,6 +1,6 @@
 import React from "react";
 import Toogle from "../Toogle/Toogle";
-import './Navbar.css'
+import './Navbar.css' 
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
@@ -44,6 +44,8 @@ const Navbar = () => {
             </div>
         </div>
         </div>
-    )
+    
+       
+        )
 }
 export default Navbar

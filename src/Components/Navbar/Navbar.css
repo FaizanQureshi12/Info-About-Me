@@ -53,9 +53,36 @@ border-radius: 10px;
 @media screen and (max-width:480px) {
     .n-list {
         display: none;
-    }
+        /* grid-template-columns: 1fr 1fr; */
 
+    } 
+/* .full-nav{
+    transform: scale(0.8);
+} */
     .n-button {
         display: none;
     }
 }
+
+
+/* .n-list>ul{
+    display: flex;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s;
+    font-weight: 600;
+    // 3 btn 
+    transition: 0.7s;
+    cubic-bezier(
+        .74,-0.03,0.83,0.67
+        )
+        overflow-y:hidden
+}
+
+@media screen and (max-width:800px) {
+    .cantainer{
+grid-template-columns: 1fr 1fr;
+    }
+
+    
+} */

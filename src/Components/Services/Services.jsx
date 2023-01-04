@@ -68,7 +68,7 @@ const Services =()=>{
         <Card 
         emoji ={Humble}
         heading ={'UI/Ux'}
-        detail = {"Lorem ipsum dolor sit, amet consectetur adipisicing elit.  voluptate fa iste fugit? Sed."
+        detail = {"Lorem ipsum dolor sit amet consectetur adipisicing,  elit.  voluptate fa iste fugit? Sed."
     }
         />
     </div>

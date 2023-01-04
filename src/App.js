@@ -10,6 +10,7 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import { themeContext } from "./Context";
 import { useContext } from "react";
+import Material from './Components/Material/material'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       color : darkMode? 'white': '',
     }}
     >
+      <Material/>
     <Navbar/>
     <Intro/>
     <Services/>

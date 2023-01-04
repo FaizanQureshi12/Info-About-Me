@@ -23,7 +23,7 @@ const Intro = () => {
 
     return (
         <div className="intro">
-            <div className="i-left">
+            <div className="i-left">  
                 <div className="i-name">
                     <span style={{ color: darkMode ? 'white' : '' }}>Hy! I Am</span>
                     <span>Faizan Qureshi</span>
@@ -44,7 +44,7 @@ const Intro = () => {
                         <img src={Instagram} alt="" />
                     </a>
 
-                </div>
+                </div> 
             </div>
             <div className="i-right">
                 <img src={Vector1} alt="" />
