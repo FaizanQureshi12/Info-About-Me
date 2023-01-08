@@ -109,15 +109,16 @@ export default function DrawerAppBar(props: Props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
-
                 <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
                   Home
                 </Link>
                 &nbsp;&nbsp;&nbsp;
+
                 <Link spy={true} to='Services' smooth={true}>
                   Services
                 </Link>
                 &nbsp;&nbsp;&nbsp;
+
                 <Link spy={true} to='Experience' smooth={true}>
                   Experience
                 </Link>
@@ -158,11 +159,14 @@ export default function DrawerAppBar(props: Props) {
         >
           {drawer}
 
-          <div style={
-            {
+          <div className='mblview'
+            style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center"
+              alignItems: "center",
+              gap: '1rem',
+              fontSize: '11rem',
+              fontWeight: '600',
             }}>
             <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
               Home
