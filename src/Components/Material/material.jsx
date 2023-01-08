@@ -13,6 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-scroll'
+import '../Toogle/Toogle.css'
+import { useContext } from "react";
+import Sun from '@iconscout/react-unicons/icons/uil-sun'
+import Moon from '@iconscout/react-unicons/icons/uil-moon'
+import { themeContext } from "../../Context";
+
 
 interface Props {
   /**
@@ -22,12 +29,22 @@ interface Props {
   window?: () => Window;
 }
 
+
 const drawerWidth = 240;
-const navItems = ['Home','Services','Experience','Portfolio','Testimonials','Contact'];
+const navItems =
+  ['']
+// ['Home','Services','Experience','Portfolio','Testimonials','Contact'];
 
 export default function DrawerAppBar(props: Props) {
+
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleClick = () => {
+    theme.dispatch({ type: 'toogle' });
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -56,9 +73,10 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" 
-       style={{backgroundColor:"orange",
-       boxShadow:"8px 9px 4px 4px"}}>
+      <AppBar component="nav"
+        style={{
+          backgroundColor: "orange",
+        }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -75,10 +93,49 @@ export default function DrawerAppBar(props: Props) {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             Faizan
+
           </Typography>
+          <span className="toggle"
+            style={{ display: 'flex' }}
+            onClick={handleClick} >
+            <Moon />
+            <Sun />
+            <span className="t-button"
+              style={darkMode ? { left: '4px' } : { right: '2px' }}
+            >
+            </span>
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
+
+                <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
+                  Home
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                <Link spy={true} to='Services' smooth={true}>
+                  Services
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                <Link spy={true} to='Experience' smooth={true}>
+                  Experience
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                <Link spy={true} to='Portfolio' smooth={true}>
+                  Portfolio
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                <Link spy={true} to='Testimonials' smooth={true}>
+                  Testimonials
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+
+                <Link spy={true} to='Contact' smooth={true}>
+                  <button className="button n-button">
+                    Contact
+                  </button>
+                </Link>
                 {item}
               </Button>
             ))}
@@ -100,9 +157,38 @@ export default function DrawerAppBar(props: Props) {
           }}
         >
           {drawer}
+
+          <div style={
+            {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}>
+            <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
+              Home
+            </Link>
+
+            <Link spy={true} to='Services' smooth={true}>
+              Services
+            </Link>
+
+            <Link spy={true} to='Experience' smooth={true}>
+              Experience
+            </Link>
+
+            <Link spy={true} to='Portfolio' smooth={true}>
+              Portfolio
+            </Link>
+            <Link spy={true} to='Testimonials' smooth={true}>
+              Testimonials
+            </Link>
+            <Link spy={true} to='Contact' smooth={true}>
+              Contact
+            </Link>
+          </div>
         </Drawer>
       </Box>
-     
+
     </Box>
   );
-        }
+}
