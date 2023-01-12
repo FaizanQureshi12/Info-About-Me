@@ -29,10 +29,8 @@ interface Props {
   window?: () => Window;
 }
 
-
 const drawerWidth = 240;
-const navItems =
-  ['']
+const navItems = ['']
 // ['Home','Services','Experience','Portfolio','Testimonials','Contact'];
 
 export default function DrawerAppBar(props: Props) {
@@ -51,12 +49,13 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerToggle}
+      sx={{ textAlign: 'center' }}>
+      <Typography className='mblname' variant="h6" sx={{ my: 2 }}>
         Faizan
       </Typography>
       <Divider />
-      <List>
+      <List >
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -168,27 +167,39 @@ export default function DrawerAppBar(props: Props) {
               fontSize: '11rem',
               fontWeight: '600',
             }}>
-            <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
-              Home
-            </Link>
+            <span className='mblcrcle' >
+              <Link spy={true} to='home' smooth={true} activeClass='activeClass'>
+                Home
+              </Link></span>
 
-            <Link spy={true} to='Services' smooth={true}>
-              Services
-            </Link>
+            <span className='mblcrcle' >
+              <Link spy={true} to='Services' smooth={true}>
+                Services
+              </Link> </span>
 
-            <Link spy={true} to='Experience' smooth={true}>
-              Experience
-            </Link>
+            <span className='mblcrcle' >
+              <Link spy={true} to='Experience' smooth={true}>
+                Experience
+              </Link>
+            </span>
 
-            <Link spy={true} to='Portfolio' smooth={true}>
-              Portfolio
-            </Link>
-            <Link spy={true} to='Testimonials' smooth={true}>
-              Testimonials
-            </Link>
-            <Link spy={true} to='Contact' smooth={true}>
-              Contact
-            </Link>
+            <span className='mblcrcle' >
+              <Link spy={true} to='Portfolio' smooth={true}>
+                Portfolio
+              </Link>
+            </span>
+
+            <span className='mblcrcle' >
+              <Link spy={true} to='Testimonials' smooth={true}>
+                Testimonials
+              </Link>
+            </span>
+
+            <span className='mblcrcle' >
+              <Link spy={true} to='Contact' smooth={true}>
+                Contact
+              </Link>
+            </span>
           </div>
         </Drawer>
       </Box>
